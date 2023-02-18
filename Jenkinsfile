@@ -3,7 +3,7 @@ pipeline {
     
     tools {
         nodejs 'Node 18.12.1'
-}
+    }
 
     stages {
         stage('Cloning Git') {
@@ -23,5 +23,13 @@ pipeline {
                 bat 'npm run smoke'
             }
         }
+
+        post{
+            always{
+                echo "========always========"
+                mail bcc: '', body: 'Sample Mail', cc: 'skg11786@gmail.com', from: '', replyTo: '', subject: 'WDIO Jenkins Report', to: 'device.test1420@gmail.com'
+            }
+        }
+        
     }
 }

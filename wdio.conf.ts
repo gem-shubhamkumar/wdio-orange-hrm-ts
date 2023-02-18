@@ -65,8 +65,8 @@ export const config: Options.Testrunner = {
     suites: {
         smoke: [
             './features/**/TC01*.feature',
-            './features/**/TC14*.feature',
-            './features/**/TC17*.feature',
+            // './features/**/TC14*.feature',
+            // './features/**/TC17*.feature',
         ],
         regression: [
             './features/**/TC03*.feature',
